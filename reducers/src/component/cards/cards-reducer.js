@@ -26,10 +26,9 @@ export default (state = defaultState, {type, payload}) => {
       allTeamsInSport = state[sportByID];
 
       updatedState = allTeamsInSport.filter(team => team.id === targetTeamByID);
-      console.log(updatedState);
-      updatedState.sportID = sportByID;
-      updatedState.id = targetTeamByID;
-      updatedState.team = payload.team;
+      updatedState[0].sportID = sportByID;
+      updatedState[0].id = targetTeamByID;
+      updatedState[0].team = payload.team;
       return state;
     case 'DELETE_TEAM':
       targetTeamByID = payload.id;

@@ -11,7 +11,7 @@ export default (state = defaultState, { type, payload }) => {
       updatedSport.sportID = sportByID;
       return state;
     case 'DELETE_SPORT':
-      return state.filter(sport => sport.id !== payload.id);
+      return state.filter(sport => sport.sportID !== payload.sportID);
     default:
       return state;
   }

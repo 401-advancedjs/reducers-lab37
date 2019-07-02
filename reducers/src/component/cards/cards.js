@@ -6,7 +6,6 @@ class Cards extends React.Component{
     return(
       <>
       <p>Inside cards</p>
-      {/* { this.props.team.team } */}
       </>
     );
   }
